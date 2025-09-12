@@ -37,7 +37,7 @@ words.sort(key=len, reverse=True)
 print(words)  # ['banana', 'cherry', 'apple']
 ```
 
-### 🔹 reversed()
+### 🔹 `reversed()`
 - 정렬이 아니라 **순서 뒤집기**
 - 결과는 iterator로 반환
 ```python
