@@ -149,3 +149,106 @@
 - **데이터 존재 여부만 빠르게 확인**하고 싶을 땐 무조건 `set`을 쓰자
 - `list`는 순서가 필요하거나, 작은 데이터 처리에 적합
 - 특히 입력 데이터가 크고 `in` 연산을 반복하는 경우는 set이 필수
+
+
+## 🔹 상대 순위 (Rank) 변환
+⚡ 상대 순위(Ranking) 는 값의 "서열 관계"만 유지하고 싶을 때 사용되는 테크닉
+
+즉, 값의 크기 자체가 아니라 크기의 상대적 순서만 중요할 때 유용함
+
+### 🔍 개념
+리스트 안의 각 원소를 "해당 값이 전체에서 몇 번째로 작은지(=순위)"로 변환
+
+-> **중복값은 같은 순위**를 가지게 됨
+
+### 🔁 기본 패턴
+```python
+data = [12, 5, 5, 20]
+```
+
+1️⃣ 중복 제거 후 정렬
+```python
+sorted_unique = sorted(set(data))  # [5, 12, 20]
+```
+
+2️⃣ 각 값 → 순위 매핑
+```python
+rank = {v: i for i, v in enumerate(sorted_unique)}
+# {5: 0, 12: 1, 20: 2}
+```
+
+3️⃣ 순위 변환
+```python
+ranks = [rank[x] for x in data]
+# [1, 0, 0, 2]
+```
+
+### ✅ 예시 문제: 멀티버스2 (백준 18869)
+- M개의 우주가 있고, 각 우주에는 N개의 행성이 있음
+- 각 행성은 고유한 크기를 가지지만, 우주마다 크기의 절대값은 다를 수 있음
+- "서열(크기 비교 관계)"만 같으면 두 우주는 같은 구조의 우주로 간주
+```python
+M, N = map(int, input().split())
+universes = []
+
+for _ in range(M):
+    data = list(map(int, input().split()))
+    sorted_unique = sorted(set(data))
+    rank = {v: i for i, v in enumerate(sorted_unique)}
+    universes.append(tuple(rank[x] for x in data))
+
+print(universes)
+# [(1,2,0,1), (1,2,0,1), (0,1,2,0)]
+```
+- 같은 (1,2,0,1) 패턴이면 "같은 우주"로 간주할 수 있음
+
+### ⚙️ 시간 복잡도
+- 정렬: `O(N log N)`
+- 변환: `O(N)`
+- 총 `O(N log N)`
+
+
+## 🔹 Counter (빈도수 세기)
+⚡ `collections.Counter` 는 데이터의 **등장 횟수를 손쉽게 세는 클래스형 자료구조**
+
+-> 딕셔너리와 비슷하지만, "값의 빈도수"에 특화됨
+
+### 🔍 기본 사용법
+```python
+from collections import Counter
+
+data = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+count = Counter(data)
+print(count)
+# Counter({'apple': 3, 'banana': 2, 'orange': 1})
+```
+- `count['apple']` -> 3
+- 가장 많이 등장한 항목: `count.most_common(1)` -> `[('apple', 3)]`
+
+### ✅ 예시 문제: 멀티버스2 (백준 18869)
+```python
+from collections import Counter
+
+# 상대 순위로 변환된 각 우주
+universes = [
+    (1, 2, 0, 1),
+    (1, 2, 0, 1),
+    (0, 1, 2, 0)
+]
+
+cnt = Counter(universes)
+print(cnt)
+# Counter({(1, 2, 0, 1): 2, (0, 1, 2, 0): 1})
+
+# 같은 패턴의 쌍 개수 = nC2 = v*(v-1)//2
+result = sum(v * (v - 1) // 2 for v in cnt.values())
+print(result)  # 1
+```
+- ➡️ `(1,2,0,1)` 패턴이 2번 등장 -> 쌍 1개 (2C2 = 1)
+- ➡️ `(0,1,2,0)` 패턴은 1번 등장 -> 쌍 없음
+
+### ⚙️ 시간 복잡도
+- Counter 생성: `O(N)`
+- 빈도 계산 및 조합 합산: `O(N)`
+- 전체 O(N)
+
