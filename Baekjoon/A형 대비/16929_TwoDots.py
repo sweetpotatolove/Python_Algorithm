@@ -34,3 +34,5 @@ for i in range(N):
 
 if not ok:
     print('No')
+
+    2500 * 4
