@@ -16,7 +16,7 @@
 | 그리디 | [Baekjoon](Problems/Baekjoon/12_그리디) | 그리디, 우선순위, 정렬 기반 선택 |
 | 이분탐색 | [Baekjoon](Problems/Baekjoon/13_이분탐색) | 이분탐색, parametric search |
 | 투포인터/슬라이딩윈도우 | [Baekjoon](Problems/Baekjoon/14_투포인터) | 투포인터, 슬라이딩 윈도우 |
-| 스택/큐/덱 | [Baekjoon](Problems/Baekjoon/03_Stack) | 스택, 큐, 덱 |
+| 스택/큐/덱 | [Programmers](Problems/Programmers/스택_큐_덱) / [Baekjoon](Problems/Baekjoon/03_Stack) | 스택, 큐, 덱 |
 | 시뮬레이션 | [Baekjoon](Problems/Baekjoon/11_시뮬레이션) | 구현, 시뮬레이션, 수학적 구현 |
 | 문자열/해시 | [Baekjoon](Problems/Baekjoon/15_해시) | 문자열, 해시, 카운팅 |
 | 트리/힙 | [Baekjoon](Problems/Baekjoon/16_이진검색트리) | 트리, 이진검색트리, 힙/우선순위큐 |
