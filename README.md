@@ -6,23 +6,42 @@
 
 ## 바로가기
 
-- [학습 메모](learning_notes.md)
+| 주제 | 바로가기 | 포함 내용 |
+| --- | --- | --- |
+| 기초 | [Baekjoon](Problems/Baekjoon/00_기초%20코드) | 입출력, 조건문, 반복문, 함수, 문자열 처리 |
+| 배열/자료구조 | [Baekjoon](Problems/Baekjoon/01_Array) | 배열, 리스트, 집합, 맵/딕셔너리, 정렬 |
+| 탐색 | [Baekjoon](Problems/Baekjoon/06_BFS)| 완전탐색, BFS, DFS, 백트래킹 |
+| 그래프 | [Baekjoon](Problems/Baekjoon) | 그래프 이론, 최단경로, 서로소집합, 위상정렬 |
+| 동적계획법 | [Baekjoon](Problems/Baekjoon/10_DP) | DP, 메모이제이션, 타뷸레이션, LIS, 배낭문제 |
+| 그리디 | [Baekjoon](Problems/Baekjoon/12_그리디) | 그리디, 우선순위, 정렬 기반 선택 |
+| 이분탐색 | [Baekjoon](Problems/Baekjoon/13_이분탐색) | 이분탐색, parametric search |
+| 투포인터/슬라이딩윈도우 | [Baekjoon](Problems/Baekjoon/14_투포인터) | 투포인터, 슬라이딩 윈도우 |
+| 스택/큐/덱 | [Baekjoon](Problems/Baekjoon/03_Stack) | 스택, 큐, 덱 |
+| 시뮬레이션 | [Baekjoon](Problems/Baekjoon/11_시뮬레이션) | 구현, 시뮬레이션, 수학적 구현 |
+| 문자열/해시 | [Baekjoon](Problems/Baekjoon/15_해시) | 문자열, 해시, 카운팅 |
+| 트리/힙 | [Baekjoon](Problems/Baekjoon/16_이진검색트리) | 트리, 이진검색트리, 힙/우선순위큐 |
+
 
 ## 📁 폴더 구조
 ```
 Python_Algorithm/
-├── BOJ/
-│   ├── BFS/
-│   │   ├── 1926.py
+├── Problems/
+│   ├── BOJ/
+│   │   ├── BFS/
+│   │   │   ├── 1926.py
+│   │   │   └── ...
+│   │   ├── DFS/
+│   │   │   ├── 2667.py
+│   │   │   └── ...
 │   │   └── ...
-│   ├── DFS/
-│   │   ├── 2667.py
+│   ├── SEWA/
+│   │   ├── 구현/
+│   │   │   ├── 001.py
+│   │   │   └── ...
 │   │   └── ...
-│   └── ...
-├── SEWA/
-│   ├── 구현/
-│   │   ├── 001.py
-│   │   └── ...
+│   └── ...   
+├── Algorithm/
+│   └── 알고리즘 개념 정리 (예정)
 └── README.md
 ```
 
