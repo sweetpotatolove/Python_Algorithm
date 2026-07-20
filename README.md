@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | 기초 | [Baekjoon](Problems/Baekjoon/00_기초%20코드) | 입출력, 조건문, 반복문, 함수, 문자열 처리 |
 | 배열/자료구조 | [Baekjoon](Problems/Baekjoon/01_Array) | 배열, 리스트, 집합, 맵/딕셔너리, 정렬 |
-| 탐색 | [Baekjoon](Problems/Baekjoon/06_BFS)| 완전탐색, BFS, DFS, 백트래킹 |
+| 탐색 | [Programmers](Problems/Programmers/탐색) / [Baekjoon](Problems/Baekjoon/06_BFS)| 완전탐색, BFS, DFS, 백트래킹 |
 | 그래프 | [Baekjoon](Problems/Baekjoon) | 그래프 이론, 최단경로, 서로소집합, 위상정렬 |
 | 동적계획법 | [Baekjoon](Problems/Baekjoon/10_DP) | DP, 메모이제이션, 타뷸레이션, LIS, 배낭문제 |
 | 그리디 | [Baekjoon](Problems/Baekjoon/12_그리디) | 그리디, 우선순위, 정렬 기반 선택 |
